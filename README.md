@@ -9,7 +9,7 @@
 
 Code and experiment records for AgentBug-Smith and Live-Harness Bench.
 
-The 200 executable instances are a file benchmark, in the same role as [SWE-bench](https://github.com/swe-bench/SWE-bench)'s dataset: [Live-Harness Bench](https://huggingface.co/buckets/IMICLRAUTHOR/live-harness-bench). This repository is the harness that builds those instances and the logs behind the paper's tables.
+The 200 executable instances are a file benchmark: [Live-Harness Bench](https://huggingface.co/buckets/IMICLRAUTHOR/live-harness-bench). This repository is the harness that builds those instances and the logs behind the paper's tables.
 
 ## News
 

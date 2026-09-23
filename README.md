@@ -42,11 +42,7 @@ Live-Harness Bench covers harness components across a wide reporting window. The
   <img src="assets/temporal_distribution.png" alt="Temporal distribution of issues" width="720">
 </p>
 
-On the shared set of 225 harness issues, reproduction success is 45/225 with GPT-4.1-mini, 46/225 with Kimi-k2.5, and 63/225 with DeepSeek-v3.2. The overlap with SWE-Factory and SWE-bench-Live is below.
-
-<p align="center">
-  <img src="assets/venn_baselines.png" alt="Overlap of reproduced issues" width="480">
-</p>
+On the shared set of 225 harness issues, reproduction success is 45/225 with GPT-4.1-mini, 46/225 with Kimi-k2.5, and 63/225 with DeepSeek-v3.2.
 
 ## Layout
 

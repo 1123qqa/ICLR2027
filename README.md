@@ -24,29 +24,35 @@ AgentBug-Smith finds these bugs in open-source agent repositories and turns each
 
 The released result is **Live-Harness Bench**, 200 instances from repositories that average 123k lines of code. A gold patch changes 3.8 files and 202.9 lines on average. The bugs cover tool registries (31.5%), context and memory (30.5%), lifecycle and orchestration (22.0%), observability (11.5%), and governance (4.5%), and they include reports from as late as August 2025.
 
+<a id="fig-e2e"></a>
 <p align="center">
-  <img src="assets/e2e.png" alt="End-to-end pipeline" width="860">
+  <a href="#fig-e2e"><img alt="New" src="https://img.shields.io/badge/New-111111?style=flat-square"></a>
+  <a href="assets/figures/e2e-old.md"><img alt="Old" src="https://img.shields.io/badge/Old-d0d0d0?style=flat-square"></a>
 </p>
 <p align="center">
-  <img src="assets/e2e-new.png" alt="End-to-end pipeline, revised" width="860">
+  <img src="assets/e2e-new.png" alt="End-to-end pipeline" width="860">
 </p>
 
 On one shared pool of 225 identified issues, AgentBug-Smith reproduces 45 with GPT-4.1-mini, 46 with Kimi-k2.5, and 63 with DeepSeek-v3.2. SWE-Factory reproduces 21, 19, and 31 of those issues. SWE-bench-Live reproduces 6, 6, and 1. The 200 instances on Hugging Face are the executable benchmark. The 225-issue pool is the comparison, and its logs are `rq/rq1/`.
 
 Asked to fix the benchmark, mini-SWE-agent, OpenHands, and AutoCodeRover correctly match the developer patch on 9.00%, 8.50%, and 3.50% of instances. A skill distilled from 121 issues, with whole repositories held out, raises mini-SWE-agent from 1.27% to 7.59% correct on the remaining 79.
 
+<a id="fig-e2e-p2"></a>
 <p align="center">
-  <img src="assets/e2e-p2.png" alt="Harness bug identification" width="860">
+  <a href="#fig-e2e-p2"><img alt="New" src="https://img.shields.io/badge/New-111111?style=flat-square"></a>
+  <a href="assets/figures/e2e-p2-old.md"><img alt="Old" src="https://img.shields.io/badge/Old-d0d0d0?style=flat-square"></a>
 </p>
 <p align="center">
-  <img src="assets/e2e-p2-new.png" alt="Harness bug identification, revised" width="860">
+  <img src="assets/e2e-p2-new.png" alt="Harness bug identification" width="860">
 </p>
 
+<a id="fig-e2e-p3"></a>
 <p align="center">
-  <img src="assets/e2e-p3.png" alt="Environment construction and test generation" width="860">
+  <a href="#fig-e2e-p3"><img alt="New" src="https://img.shields.io/badge/New-111111?style=flat-square"></a>
+  <a href="assets/figures/e2e-p3-old.md"><img alt="Old" src="https://img.shields.io/badge/Old-d0d0d0?style=flat-square"></a>
 </p>
 <p align="center">
-  <img src="assets/e2e-p3-new.png" alt="Environment construction and test generation, revised" width="860">
+  <img src="assets/e2e-p3-new.png" alt="Environment construction and test generation" width="860">
 </p>
 
 <p align="center">

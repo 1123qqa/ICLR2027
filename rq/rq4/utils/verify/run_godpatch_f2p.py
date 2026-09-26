@@ -18,8 +18,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path("/Users/eamin/Desktop/RQ4")
-AGENTSMITH_ROOT = Path("/Users/eamin/AgentBug-Smith")
+REPO_ROOT = Path("/home/anonymous/Desktop/RQ4")
+AGENTSMITH_ROOT = Path("/home/anonymous/AgentBug-Smith")
 
 sys.path.insert(0, str(AGENTSMITH_ROOT / "src"))
 from testrun.verify import run_f2p_verify  # noqa: E402

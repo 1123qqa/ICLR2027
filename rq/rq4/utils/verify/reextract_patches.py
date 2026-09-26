@@ -16,8 +16,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path("/Users/eamin/Desktop/RQ4")
-AGENTSMITH_ROOT = Path("/Users/eamin/AgentBug-Smith")
+REPO_ROOT = Path("/home/anonymous/Desktop/RQ4")
+AGENTSMITH_ROOT = Path("/home/anonymous/AgentBug-Smith")
 
 COMBOS = [
     "mini-swe-agent_40", "mini-swe-agent_60", "mini-swe-agent_80",

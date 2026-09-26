@@ -6,13 +6,13 @@ Usage:
         --patch data/verify/runs/.../patch.txt \
         --issue-json data/verify/_pool/.../issue.json \
         --base-sha c0298319ee00ab7c88ce7087b702a544395e1e3a \
-        --repo-dir /Users/eamin/AgentBug-Smith/data/strands-agents_harness-sdk \
+        --repo-dir /home/anonymous/AgentBug-Smith/data/strands-agents_harness-sdk \
         --test-relpath tests/agentsmith_fail2pass_1208.py
 """
 import argparse, asyncio, json, subprocess, shutil, sys, time
 from pathlib import Path
 
-REPO_ROOT = Path("/Users/eamin/Desktop/RQ4")
+REPO_ROOT = Path("/home/anonymous/Desktop/RQ4")
 
 
 def _run_docker_build(repo_dir: Path, dockerfile: Path, tag: str) -> bool:

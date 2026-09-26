@@ -79,7 +79,7 @@ where $z=1.96$ (95\% confidence), $p=0.5$ (maximum variance assumption), $e=0.05
 \subsection{Step 3: Human Annotation and Ground-Truth Construction}
 \label{sec:annotation}
 
-The 132 sampled issues are independently labelled by two annotators (the first author, \textbf{Yiming}, and a domain expert, \textbf{Alfin}) using the agent-issue taxonomy in \cite{agentbugsmith}. Each annotator classifies every issue as \emph{Yes} (agent issue) or \emph{No} (not an agent issue).
+The 132 sampled issues are independently labelled by two annotators (the first author, \textbf{Annotator A}, and a domain expert, \textbf{Annotator B}) using the agent-issue taxonomy in \cite{agentbugsmith}. Each annotator classifies every issue as \emph{Yes} (agent issue) or \emph{No} (not an agent issue).
 
 \vskip 0.4em
 \noindent\textbf{Inter-annotator agreement.}  We measure agreement with Cohen's $\kappa$:
@@ -92,7 +92,7 @@ p_o = \frac{1}{n}\sum_{i=1}^{n}\mathbf{1}[a_i = b_i]
 \qquad
 p_e = \sum_{c \in \{\mathrm{Y},\mathrm{N}\}} p_c^{(a)}\,p_c^{(b)}
 \end{equation}
-$p_o$ is observed agreement, $p_e$ is expected agreement by chance, $a_i$ and $b_i$ are the labels assigned by annotators $a$ (Yiming) and $b$ (Alfin) to issue $i$, and $p_c^{(a)}$, $p_c^{(b)}$ are the marginal proportions of class $c$ for each annotator.
+$p_o$ is observed agreement, $p_e$ is expected agreement by chance, $a_i$ and $b_i$ are the labels assigned by annotators $a$ (Annotator A) and $b$ (Annotator B) to issue $i$, and $p_c^{(a)}$, $p_c^{(b)}$ are the marginal proportions of class $c$ for each annotator.
 
 \begin{table}[htbp]
   \caption{Human Annotation Statistics ($n=132$)}
@@ -104,16 +104,16 @@ $p_o$ is observed agreement, $p_e$ is expected agreement by chance, $a_i$ and $b
     \midrule
     Total labelled issues                         & 132   \\
     \midrule
-    Yiming labels --- Yes / No                   & 129 / 3   \\
-    Alfin labels --- Yes / No                    & 129 / 3   \\
+    Annotator A labels --- Yes / No                   & 129 / 3   \\
+    Annotator B labels --- Yes / No                    & 129 / 3   \\
     Human Golden --- Yes / No                    & 128 / 4   \\
     \midrule
     Observed agreement $p_o$                     & $128/132 = \mathbf{0.9697}$ \\
     Chance agreement $p_e$                       & $0.9654\times0.9654 + 0.0346\times0.0346 = \mathbf{0.9556}$ \\
     Cohen's $\kappa$                             & $\mathbf{0.3178}$ \\
     \midrule
-    Yiming accuracy vs.\ Human Golden            & $131/132 = \mathbf{0.9924}$ \\
-    Alfin accuracy vs.\ Human Golden             & $129/132 = \mathbf{0.9773}$ \\
+    Annotator A accuracy vs.\ Human Golden            & $131/132 = \mathbf{0.9924}$ \\
+    Annotator B accuracy vs.\ Human Golden             & $129/132 = \mathbf{0.9773}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -121,10 +121,10 @@ $p_o$ is observed agreement, $p_e$ is expected agreement by chance, $a_i$ and $b
 \noindent The annotator contingency table is
 \[
 \begin{array}{c|cc}
- & \text{Alfin: Yes} & \text{Alfin: No} \\
+ & \text{Annotator B: Yes} & \text{Annotator B: No} \\
 \hline
-\text{Yiming: Yes} & 127 & 2 \\
-\text{Yiming: No}  & 2   & 1
+\text{Annotator A: Yes} & 127 & 2 \\
+\text{Annotator A: No}  & 2   & 1
 \end{array}.
 \]
 The off-diagonal counts are balanced (2 vs.\ 2), indicating no directional tendency for one annotator to assign more positive labels than the other. Positive agreement is high,
@@ -142,7 +142,7 @@ P_{\mathrm{neg}}
 Thus, the annotators agree strongly on positive cases, while the small number of negative cases is intrinsically less stable.
 
 \vskip 0.4em
-\noindent\textbf{Adjudication.} After independent annotation, the disagreements are reviewed and Alfin assigns the final adjudicated label, denoted \textbf{Human Golden}. This label is used as the reference for downstream validation. Because Alfin performs the final adjudication, the reported agreement between Alfin's initial labels and Human Golden is descriptive rather than an independent accuracy estimate.
+\noindent\textbf{Adjudication.} After independent annotation, the disagreements are reviewed and Annotator B assigns the final adjudicated label, denoted \textbf{Human Golden}. This label is used as the reference for downstream validation. Because Annotator B performs the final adjudication, the reported agreement between Annotator B's initial labels and Human Golden is descriptive rather than an independent accuracy estimate.
 
 \vskip 0.4em
 \noindent\textbf{Interpretation standard for $\kappa$.} We use the commonly cited Landis--Koch interpretation ranges~\cite{landis1977measurement}:

@@ -17,8 +17,8 @@ import argparse, csv, json, os, shutil, subprocess, sys, time
 from pathlib import Path
 from collections import defaultdict
 
-REPO_ROOT = Path("/Users/eamin/Desktop/RQ4")
-AGENTSMITH_ROOT = Path("/Users/eamin/AgentBug-Smith")
+REPO_ROOT = Path("/home/anonymous/Desktop/RQ4")
+AGENTSMITH_ROOT = Path("/home/anonymous/AgentBug-Smith")
 
 sys.path.insert(0, str(AGENTSMITH_ROOT / "src"))
 from testrun.verify import run_f2p_verify

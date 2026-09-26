@@ -12,11 +12,11 @@
 set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 set -a
-source "/Users/eamin/Desktop/RQ4/agent/config/.env"
+source "/home/anonymous/Desktop/RQ4/agent/config/.env"
 set +a
-source "/Users/eamin/Desktop/RQ4/agent/.venv/bin/activate"
-cd "/Users/eamin/Desktop/RQ4/agent/mini-swe-agent"
+source "/home/anonymous/Desktop/RQ4/agent/.venv/bin/activate"
+cd "/home/anonymous/Desktop/RQ4/agent/mini-swe-agent"
 exec mini --yolo --cost-limit "${COST_LIMIT:-3.0}" --exit-immediately \
-    -c "/Users/eamin/Desktop/RQ4/agent/mini-swe-agent/src/minisweagent/config/mini.yaml" \
-    -c "/Users/eamin/Desktop/RQ4/agent/config/mini.yaml" \
+    -c "/home/anonymous/Desktop/RQ4/agent/mini-swe-agent/src/minisweagent/config/mini.yaml" \
+    -c "/home/anonymous/Desktop/RQ4/agent/config/mini.yaml" \
     "$@"

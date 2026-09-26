@@ -17,7 +17,7 @@ from pathlib import Path
 
 _SCRIPT_DIR = Path(__file__).resolve().parent
 _RQ2_DIR = _SCRIPT_DIR.parent
-_SWEGENT = Path("/Users/eamin/Desktop/paper/SWEGENT-BENCH")
+_SWEGENT = Path("/home/anonymous/Desktop/paper/SWEGENT-BENCH")
 sys.path.insert(0, str(_SWEGENT / "src" / "issue-hook"))
 sys.path.insert(0, str(_SWEGENT / "src"))
 sys.path.insert(0, str(_SCRIPT_DIR / "forge_ai"))
@@ -32,7 +32,7 @@ HUMAN_CSV = _UNTITLED / "result_human.csv"
 OUT_CSV = _UNTITLED / "result_raw.csv"
 CKPT = _UNTITLED / "result_raw.checkpoint.json"
 ISSUE_ROOT = _UNTITLED / "all_issues"
-_ABS_DATA = Path("/Users/eamin/Desktop/paper/AgentBug-Smith")
+_ABS_DATA = Path("/home/anonymous/Desktop/paper/AgentBug-Smith")
 
 RAW_SYSTEM = (
     "You classify GitHub issues. Answer with exactly one word: Yes or No. "

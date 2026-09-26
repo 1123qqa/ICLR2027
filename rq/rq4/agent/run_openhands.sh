@@ -4,6 +4,6 @@
 set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 set -a
-source "/Users/eamin/Desktop/RQ4/agent/openhands-config/.env"
+source "/home/anonymous/Desktop/RQ4/agent/openhands-config/.env"
 set +a
 exec openhands --headless --override-with-envs --yolo "$@"

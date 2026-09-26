@@ -61,7 +61,7 @@ def sh_safe(cmd: list[str], *, timeout: int | None = None, cwd: str | None = Non
 def agent_repo_path(repo: str) -> Path:
     """Where the pool's repo clone lives on the host. Required so the
     docker build context can `COPY . .` from the right place."""
-    root = os.environ.get("AGENTSMITH_ROOT") or "/home/eaminchan/AgentBug-Smith"
+    root = os.environ.get("AGENTSMITH_ROOT") or "/home/anonymous/AgentBug-Smith"
     slug = repo.replace("/", "_")
     for cand in (Path(root) / "data" / slug, Path(root) / slug):
         if cand.exists() and (cand / ".git").exists():
